@@ -1,52 +1,48 @@
-/* 自定义主题美化 - 面板样式 */
+/* 扩展面板的基本样式 */
 #theme-editor-panel {
-    position: absolute; /* 绝对定位，使其可以浮动在页面上 */
-    top: 100px;
-    left: 100px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
     width: 600px;
-    min-width: 300px; /* 最小宽度 */
     height: 400px;
-    min-height: 200px; /* 最小高度 */
-    background-color: rgba(40, 40, 45, 0.9); /* 半透明背景 */
-    border: 1px solid #555;
+    background-color: rgba(40, 40, 45, 0.9);
+    border: 1px solid #666;
     border-radius: 8px;
-    z-index: 1000; /* 确保它在最上层 */
+    z-index: 1000; /* 确保面板在最上层 */
     display: none; /* 默认隐藏 */
     color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    resize: both; /* 允许用户在右下角调整大小 */
-    overflow: auto; /* 如果内容过多，显示滚动条 */
-    padding: 10px;
-    padding-top: 40px; /* 为标题栏留出空间 */
-    box-sizing: border-box; /* 避免padding影响总宽高 */
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    resize: both; /* 允许用户通过右下角缩放 */
+    overflow: auto; /* 如果内容过多，则显示滚动条 */
+    min-width: 300px; /* 最小宽度 */
+    min-height: 200px; /* 最小高度 */
 }
 
-/* 面板的标题/拖动栏 */
-#theme-editor-panel-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30px;
+/* 面板的拖动句柄和标题栏 */
+#theme-editor-panel .panel-header {
     background-color: #333;
-    cursor: move; /* 鼠标悬停时显示移动光标 */
+    padding: 8px;
+    cursor: move; /* 鼠标样式变为可移动 */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    text-align: center;
-    line-height: 30px;
-    font-weight: bold;
     user-select: none; /* 防止拖动时选中文本 */
 }
 
-/* 面板的关闭按钮 */
-#theme-editor-close-button {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 16px;
+#theme-editor-panel .panel-header .title {
+    font-weight: bold;
 }
 
-#theme-editor-close-button:hover {
-    color: #ff4d4d;
+#theme-editor-panel .panel-header .close-button {
+    float: right;
+    cursor: pointer;
 }
+#theme-editor-panel .panel-header .close-button:hover {
+    color: #ff8c8c;
+}
+
+/* 面板内容区域 */
+#theme-editor-panel .panel-content {
+    padding: 15px;
+}
+
+/* 其他按钮和输入框的样式可以加在这里 */
