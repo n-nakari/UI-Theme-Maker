@@ -1,0 +1,8 @@
+{
+    "name": "自定义主题美化",
+    "version": "0.1.0",
+    "author": "Nakari",
+    "description": "自定义主题美化",
+    "script": "script.js",
+    "style": "style.css"
+}
