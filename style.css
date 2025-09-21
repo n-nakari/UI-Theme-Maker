@@ -1,26 +1,24 @@
-/* 主题编辑器面板容器 */
+/* 自定义主题美化 - 面板样式 */
 #theme-editor-panel {
-    position: absolute; /* 使用绝对定位，使其浮动在页面之上 */
-    top: 15%;          /* 初始位置：距离顶部15% */
-    left: 20%;         /* 初始位置：距离左侧20% */
-    width: 600px;      /* 初始宽度 */
-    height: 450px;     /* 初始高度 */
-    min-width: 300px;  /* 最小宽度，防止缩得太小 */
+    position: absolute; /* 绝对定位，使其可以浮动在页面上 */
+    top: 100px;
+    left: 100px;
+    width: 600px;
+    min-width: 300px; /* 最小宽度 */
+    height: 400px;
     min-height: 200px; /* 最小高度 */
-    background-color: rgba(40, 40, 45, 0.95); /* 半透明深色背景，更有质感 */
+    background-color: rgba(40, 40, 45, 0.9); /* 半透明背景 */
     border: 1px solid #555;
     border-radius: 8px;
-    z-index: 10000;    /* 设置一个很高的层级，确保它在最顶层 */
-    display: none;     /* 默认隐藏，通过JS来显示 */
+    z-index: 1000; /* 确保它在最上层 */
+    display: none; /* 默认隐藏 */
     color: white;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* 添加阴影，使其更有立体感 */
-    resize: both;      /* 允许用户从右下角拖动来调整大小 */
-    overflow: hidden;  /* 先隐藏溢出内容，面板内部再做滚动 */
-    padding: 15px;
-    padding-top: 40px; /* 为顶部的拖动栏留出空间 */
-    box-sizing: border-box; /* 让padding和border包含在宽高内 */
-    display: flex; /* 使用flex布局来组织内部元素 */
-    flex-direction: column; /* 内部元素垂直排列 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    resize: both; /* 允许用户在右下角调整大小 */
+    overflow: auto; /* 如果内容过多，显示滚动条 */
+    padding: 10px;
+    padding-top: 40px; /* 为标题栏留出空间 */
+    box-sizing: border-box; /* 避免padding影响总宽高 */
 }
 
 /* 面板的标题/拖动栏 */
@@ -29,14 +27,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 35px; /* 拖动栏高度 */
+    height: 30px;
     background-color: #333;
     cursor: move; /* 鼠标悬停时显示移动光标 */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 30px;
     font-weight: bold;
     user-select: none; /* 防止拖动时选中文本 */
 }
@@ -44,22 +41,12 @@
 /* 面板的关闭按钮 */
 #theme-editor-close-button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 12px;
+    top: 5px;
+    right: 10px;
     cursor: pointer;
-    font-size: 18px;
-    color: #aaa;
-    transition: color 0.2s;
+    font-size: 16px;
 }
 
 #theme-editor-close-button:hover {
-    color: #fff;
-}
-
-/* 面板的主要内容区域 */
-#theme-editor-content {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto; /* 如果内容太多，只在垂直方向出现滚动条 */
+    color: #ff4d4d;
 }
