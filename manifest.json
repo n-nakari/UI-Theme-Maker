@@ -1,8 +1,9 @@
 {
     "name": "自定义主题美化",
-    "version": "0.1.0",
-    "author": "Nakari",
+    "displayName": "自定义主题美化",
     "description": "自定义主题美化",
-    "script": "script.js",
-    "style": "style.css"
+    "author": "Nakari",
+    "version": "0.1.0",
+    "minSillyTavernVersion": "1.12.0",
+    "entryScript": "index.js"
 }
